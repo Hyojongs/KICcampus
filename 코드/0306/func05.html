@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 크기 비교 함수
+        // 세수를 입력받아서 큰 수를 반환하는 함수
+        // maxNumber( num1, num2 )
+        // 검사도 중요 .
+        // maxNumber( num1, num2, num3 )
+
+        function maxNumber( value1, value2 ) {
+            let value = 0;
+            if( value1 <= value2 ) {
+                value = value2;
+            } else {
+                value = value1;
+            }
+            return value;	
+        }
+
+        function maxNumber2( value1, value2, value3 ) {
+            let value = 0;
+            if( value1 >= value2 && value1 >= value3 ) {
+                value = value1;
+            } else if( value2 >= value3 && value2 >= value1 ) {
+                value = value2;
+            } else if( value3 >= value1 && value3 >= value2 ) {
+                value = value3;
+            }
+            return value;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        let num = maxNumber( 10, 20 );
+        console.log( 'num : ' + num );
+    </script>    
+</body>
+</html>

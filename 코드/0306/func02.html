@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 선언 부분
+        function doFunc1() {
+            console.log( 'Hello Function' );
+            // 지역변수 : {} 
+            let num1 = 10;
+            console.log( 'Hello Function : ' + num1 );
+        }
+
+        // parameter / argument : 10
+        // let data1 = 10;
+        function doFunc2( data1 ) {
+            console.log( 'func2 : ' + data1 );
+        }
+
+        function doFunc3( data1, data2 ) {
+            console.log( 'func3 : ' + data1 );
+            console.log( 'func3 : ' + data2 );
+        }
+
+        function doFunc4( data1, data2 ) {
+            let sum = data1 + data2;
+            return sum;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        // 실행 부분
+        //doFunc1();
+        doFunc2( 10 );
+        doFunc3( 10, 20 );
+        let result = doFunc4( 10, 20 );
+        console.log( '결과 : ' + result );
+    </script>
+</body>
+</html>

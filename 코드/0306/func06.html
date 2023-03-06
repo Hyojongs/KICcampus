@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 익명함수
+        const doFunc1 = function() {
+            console.log( 'Hello Function' );
+        };
+
+        // 변수에 값을 대입
+        let doFunc2 = doFunc1;
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        doFunc1();
+
+        console.log( doFunc1 );
+        console.log( typeof doFunc1 );
+        
+        doFunc2();
+    </script>    
+</body>
+</html>

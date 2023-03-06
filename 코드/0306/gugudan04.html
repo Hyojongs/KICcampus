@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #inner td { 
+            width: 150px;
+            border: 1px dotted black;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function gugudan( dan ) {
+            let html = '<table id="inner">';
+            for( let col=1 ; col<=9 ; col++ ) {
+                html += '<tr>';
+                html += '<td>' + dan + 'X' + col + '=' + (dan * col) + '</td>';
+                html += '</tr>';
+            }
+            html += '</table>';
+            return html;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write( '<table border="1">' );
+	
+        let dan = 1;
+	    for( let row=1 ; row<=3 ; row++ ) {
+		    document.write( '<tr>' );
+		    for( let col=1 ; col<=3 ; col++ ) {
+			    document.write( '<td>' + gugudan(dan) + '</td>' );   
+			    dan++;
+		    }
+		    document.write( '</tr>' );
+	    }
+        
+        document.write( '</table>' );
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const rFunc = function() {
+            return function() {
+                console.log( 'Hello Function' );
+            }
+        };
+
+        const rFunc2 = function(type) {
+            if( type == 1 ) {
+                return function() {
+                    console.log( '함수1 형태 호출' );
+                }
+            } else {
+                return function() {
+                    console.log( '함수2 형태 호출' );
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        let result = rFunc();
+        result();
+
+        rFunc()();
+
+        rFunc2(1)();
+        rFunc2(10)();
+    </script>    
+</body>
+</html>
