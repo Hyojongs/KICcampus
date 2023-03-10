@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const map = new Map();
+        console.log( map );
+
+        // 2차 배열
+        const map1 = new Map(
+            [
+                ['key1', 'value1'],
+                ['key2', 'value2'],
+                ['key3', 'value3'],
+                ['key4', 'value4']
+            ]
+        );
+        console.log( map1 );
+        console.log( map1.size );
+
+        const map2 = [
+            { key: 1, value: 10 },
+            { key: 2, value: 20 },
+            { key: 3, value: 30 }
+        ];
+
+        console.log( map2 );
+
+        //console.log( map1[0] );
+        //console.log( map1[1] );
+
+        for( let data of map1 ) {
+            //console.log( data );
+            //console.log( data[0], data[1] );
+        }
+
+        for( let [key, value] of map1 ) {
+            console.log( key, value );
+        }
+
+    </script>
+</body>
+</html>

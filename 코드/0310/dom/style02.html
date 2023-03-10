@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		.t1 { border: 1px solid red; }
+		.t2 { color: orange; }
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById( 'btn1' ).onclick = function() {
+				//const h1s = document.getElementsByTagName( 'h1' );
+				const h1s = document.querySelector( '#h2' );
+				console.log( h1s.classList );
+			};
+
+			document.getElementById( 'btn2' ).onclick = function() {
+				const h2 = document.querySelector( '#h2' );
+				h2.classList.add( 't2' );
+			};
+
+			document.getElementById( 'btn3' ).onclick = function() {
+				const h2 = document.querySelector( '#h2' );
+				h2.classList.remove( 't2' );
+			};
+		};
+	</script>
+</head>
+<body>
+	<input type="button" id="btn1" value="class 목록" />
+	<input type="button" id="btn2" value="class 추가" />
+	<input type="button" id="btn3" value="class 제거" />
+	<br /><hr /><br />
+	<h1 id="h1" class="t1 t2">Hello Style</h1>
+	<h1 id="h2" class="t1">Hello Style</h1>
+	<h1 id="h3" class="t2">Hello Style</h1>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let str1 = '사과,딸기,수박,참외';
+
+        // 구분자 중심의 문자열 분리 => 배열
+        let arr1 = str1.split(',');
+        console.log( arr1 );
+
+        // for of
+        for( let value of arr1 ) {
+            console.log( value );
+        }
+    </script>
+</body>
+</html>

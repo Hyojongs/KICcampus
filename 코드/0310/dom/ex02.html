@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript">
+		const viewTag = function() {
+			// querySelector()		- id
+			// querySelectorAll()	- tag, class
+
+			let h1 = document.querySelector( '#h1' );
+			console.log( h1 );
+
+			let h2s = document.querySelectorAll( '.c1' );
+			console.log( h2s );
+			console.log( h2s[0] );
+		};
+	</script>
+</head>
+<body>
+	<input type="button" value="tag 보기" onclick="viewTag()"/>
+	<br /><hr /><br />
+	<h2 id="h1" class="c1">Header 1</h2>
+	<h2 id="h2">Header 2</h2>	
+	<h2 id="h3" class="c1">Header 3</h2>
+</body>
+</html>

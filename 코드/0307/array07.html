@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        // 다차원 배열 - 2차원(행/열), 3차(x,y,z) ..
+        let arr1 = [
+            [10, 20, 30],
+            [40, 50, 60],
+            [70, 80, 90]
+        ];
+
+        let arr2 = [
+            [10],
+            [40, 50],
+            [70, 80, 90]
+        ];
+
+        let arr3 = Array(
+            Array(10, 20, 30),
+            Array(40, 50, 60),
+            Array(70, 80, 90)
+        );
+
+        console.log( arr1 );
+        
+        console.log( arr1[0] );
+        console.log( arr1[1] );
+        console.log( arr1[2] );
+
+        console.log( arr1[0][0] );
+        console.log( arr1[0][1] );
+        console.log( arr1[0][2] );
+
+        //
+        console.log( arr1.length );
+        console.log( arr1[0].length );
+
+        // 전체 데이터를 for
+        for( let i=0 ; i<arr1.length ; i++ ) {
+            for( let j=0 ; j<arr1[i].length ; j++ ) {
+                console.log( arr1[i][j] );
+            }
+        }
+
+        // 전체 데이터를 for - in
+        for( let i in arr1 ) {
+            for( let j in arr1[i] ) {
+                console.log( arr1[i][j] );
+            }   
+        }
+    </script>
+</body>
+</html>

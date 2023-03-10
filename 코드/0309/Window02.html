@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // window.open
+        // open( 'url', '창이름', '옵션' );
+
+        // 새로운 tab 생성됨
+        //open( 'https://m.daum.net' );
+
+        // 옵션
+        // top / left : 창의 위치
+        // width / height : 창의 크기
+        //open( 'https://m.daum.net', 'winopen', 'width=640,height=960' );
+
+
+        let child;
+        const openWin = function() {
+            child = open( './Math03.html', 'winopen', 'width=640,height=960,top=300,left=300' );
+        }
+
+        const closeWin = function() {
+            child.close();
+        }
+    </script>
+    <button onclick="openWin()">창 열기</button>
+    <button onclick="closeWin()">창 닫기</button>
+</body>
+</html>

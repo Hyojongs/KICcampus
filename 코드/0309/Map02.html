@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const map = new Map();
+
+        //map.set( 'key1', 'value1' );
+        //map.set( 'key2', 'value2' );
+        //map.set( 'key3', 'value3' );
+
+        // method chaining
+        map.set( 'key1', 'value1' ).set( 'key2', 'value2' );
+
+        for( let [key, value] of map ) {
+            console.log( key, value );
+        }
+
+    </script>
+</body>
+</html>

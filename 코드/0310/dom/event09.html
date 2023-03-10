@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			let buttons = document.getElementsByClassName( 'btn' );
+			//console.log( buttons );
+			//console.log( buttons[0] );
+
+			//buttons.onclick = function() {
+			//	console.log( 'button 클릭' );
+			//}
+
+			for( let i=0 ; i<buttons.length ; i++ ) {
+				buttons[i].onclick = function() {
+					// this - 자기참조
+					console.log( 'button 클릭 : ', this );
+					console.log( 'button 클릭 : ', this.id );
+					console.log( 'button 클릭 : ', this.value );
+				};
+			}
+
+			// forEach
+		};
+	</script>
+</head>
+<body>
+
+	<input type="button" id="btn1" class="btn" value="버튼 1" />
+	<input type="button" id="btn2" class="btn" value="버튼 2" />
+	<input type="button" id="btn3" class="btn" value="버튼 3" />
+	<input type="button" id="btn4" class="btn" value="버튼 4" />
+	<input type="button" id="btn5" class="btn" value="버튼 5" />
+	<br /><hr /><br />
+	<input type="text" />
+
+</body>
+</html>

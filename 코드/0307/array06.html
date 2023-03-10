@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        let num1 = 10;
+        // 깊은 복사(값)
+        let num2 = num1;
+        console.log( num1, num2 );
+
+        num1 = 20;
+        console.log( num1, num2 );
+
+        // 참조자료형 => 객체
+        let arr1 = [1, 2, 3];
+        // 얕은 복사(주소, 참조값)
+        let arr2 = arr1;
+        console.log( arr1[0], arr1[1], arr1[2] );
+        console.log( arr2[0], arr2[1], arr2[2] );
+
+        arr1[0] = 100;
+        arr1[1] = 200;
+        arr1[2] = 300;
+        console.log( arr1[0], arr1[1], arr1[2] );
+        console.log( arr2[0], arr2[1], arr2[2] );
+    </script>
+</body>
+</html>

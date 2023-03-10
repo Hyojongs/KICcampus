@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            width: 100px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write( '<table>' );
+        for( let row=1 ; row<=5 ; row++ ) {
+            document.write( '<tr>' )
+            for( let col=1 ; col<=6 ; col++ ) {
+                document.write( '<td>' + ( parseInt( Math.random() * 45 ) + 1 ) + '</td>' );
+            }
+            document.write( '</tr>' );
+        }
+        document.write( '</table>' );
+    </script>   
+</body>
+</html>

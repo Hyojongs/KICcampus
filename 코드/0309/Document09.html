@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const checkfrm = function() {
+            /*
+            console.log( document.frm1.cb1.checked );
+            console.log( document.frm1.cb1.value );
+            console.log( document.frm1.cb2.checked );
+            console.log( document.frm1.cb2.value );
+            console.log( document.frm1.cb3.checked );
+            console.log( document.frm1.cb3.value );
+            console.log( document.frm1.cb4.checked );
+            console.log( document.frm1.cb4.value );
+            */
+
+            if( document.frm1.cb1.checked ) {
+                console.log( document.frm1.cb1.value );
+            }
+            if( document.frm1.cb2.checked ) {
+                console.log( document.frm1.cb2.value );
+            }
+            if( document.frm1.cb3.checked ) {
+                console.log( document.frm1.cb3.value );
+            }
+            if( document.frm1.cb4.checked ) {
+                console.log( document.frm1.cb4.value );
+            }
+        };
+    </script>
+
+    <form name="frm1" action="test1.html">
+        <input type="checkbox" name="cb1" value="사과">사과<br />
+        <input type="checkbox" name="cb2" value="딸기" checked>딸기<br />
+        <input type="checkbox" name="cb3" value="수박">수박<br />
+        <input type="checkbox" name="cb4" value="참외">참외<br /><br />
+
+        <input type="button" value="form 내용 읽기" onclick="checkfrm()" />
+    </form>
+
+    
+
+</body>
+</html>

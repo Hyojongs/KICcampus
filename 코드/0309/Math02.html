@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 최대, 최소
+        console.log( Math.max( 52, 273, 57, 32, 300 ) );
+        console.log( Math.min( 52, 273, 57, 32, 1 ) );
+
+        // 난수, 임의의 추출
+        // 0<= x < 1 임의의 실수
+        console.log( Math.random() );
+        console.log( Math.random() );
+        console.log( Math.random() );
+
+        // 0 ~ 9까지 중 임의의 정수 추출
+        // 0 * 10 <= x < 1 * 10 임의의 실수
+        // 실수 -> 정수(parseInt())
+        console.log( parseInt( Math.random() * 10 ) );
+        console.log( parseInt( Math.random() * 10 ) );
+
+        // lotto : 1 ~ 45
+        console.log( parseInt( Math.random() * 45 ) + 1 );
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script type="text/javascript">
+		const calculate = function() {
+			//alert( 'calculate 호출' );
+
+			let num1 = document.frm.num1.value;
+			let num2 = document.frm.num2.value;
+
+			//console.log( num1 );
+			//console.log( num2 );
+			//console.log( oper );
+
+			if( num1 == '' || num2 == '' ) {
+				alert( 'num1과 num2 값을 입력하셔야 합니다.' );
+			} else {
+				let oper = document.frm.oper.options[document.frm.oper.options.selectedIndex].text;
+				
+				let inum1 = parseInt( num1 );
+				let inum2 = parseInt( num2 );
+
+				let result = 0;
+				switch( oper ) {
+					case '+' :
+						result = inum1 + inum2;
+						break;
+					case '-' :
+						result = inum1 - inum2;
+						break;
+					case 'x' :
+						result = inum1 * inum2;
+						break;
+				}
+
+				document.frm.result.value = result;
+			}
+
+		};
+	</script>
+</head>
+<body>
+	<form name="frm">
+		<input type="text" name="num1"/>
+		<select name="oper">
+			<option selected>+</option>
+			<option>-</option>
+			<option>x</option>
+		</select>
+		<input type="text" name="num2"/>
+		=
+		<input type="button" value="계산" onclick="calculate()"/>
+		<input type="text" name="result" placeholder="결과" readonly/>
+	</form>
+</body>
+</html>

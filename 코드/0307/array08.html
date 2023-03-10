@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        // 다차원 배열 - 2차원(행/열), 3차(x,y,z) ..
+        let arr1 = [
+            [
+                [ 1, 2, 3 ],
+                [ 10, 20, 30 ]
+            ],
+            [
+                [ 4, 5, 6 ],
+                [ 40, 60, 60 ]
+            ]
+        ];
+
+        // for
+        for( let i=0 ; i<arr1.length ; i++) {
+	        for( let j=0 ; j<arr1[i].length ; j++) {
+		        for( let k=0 ; k<arr1[i][j].length ; k++) {
+			        console.log( arr1[i][j][k] );
+		        }   
+	        }
+        }
+    </script>
+</body>
+</html>

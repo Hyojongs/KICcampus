@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let arr1 = new Array( 10, 20, 30, 40 );
+
+        // for
+        for( let i=0 ; i<arr1.length ; i++ ) {
+            console.log( arr1[i] );
+        }
+
+        // 메서드
+        arr1.forEach( function( e, i ) {
+            console.log( '함수 호출 : ', e, i );
+        });
+
+        // => arr1 합계 ..
+
+        let sum = 0;
+        arr1.forEach( function(e) {
+            sum += e;
+        });
+        console.log( '합계 :', sum );
+    </script>
+</body>
+</html>

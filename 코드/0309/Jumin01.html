@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        const jumin = '123456-1234567';
+        
+        // 전처리
+        let strJumin = jumin.replace( '-', '' );
+        console.log( strJumin );
+
+        // substring
+        let num01 = Number(strJumin.substring(0, 1) ) * 2;
+        let num02 = Number(strJumin.substring(1, 2) ) * 3;
+        let num03 = Number(strJumin.substring(2, 3) ) * 4;
+        let num04 = Number(strJumin.substring(3, 4) ) * 5;
+        let num05 = Number(strJumin.substring(4, 5) ) * 6;
+        let num06 = Number(strJumin.substring(6, 6) ) * 7;
+        let num07 = Number(strJumin.substring(6, 7) ) * 8;
+        let num08 = Number(strJumin.substring(7, 8) ) * 9;
+        let num09 = Number(strJumin.substring(8, 9) ) * 2;
+        let num10 = Number(strJumin.substring(9, 10) ) * 3;
+        let num11 = Number(strJumin.substring(10, 11) ) * 4;
+        let num12 = Number(strJumin.substring(11, 12) ) * 5;
+
+        let num13 = Number(strJumin.substring(12, 13) );
+        console.log( num01, num12 );
+
+        let sum = num01 + num02 + num03 + num04 + num05 + num06
+            + num07 + num08 + + num09 + num10 + num11 + num12;
+            
+        let result = ( 11 - (sum % 11 ) ) % 10;
+
+        if( num13 == result ) {
+            console.log( '번호형식 맞음' );
+        } else {
+            console.log( '번호형식 틀림' );
+        }
+
+
+
+
+    </script>
+</body>
+</html>

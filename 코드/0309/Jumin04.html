@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        class Util {
+            constructor( jumin ) {
+                this.jumin = jumin;
+            }
+
+            isJuminCheck() {
+                //console.log( this.jumin );
+
+                let strJumin = this.jumin.replace( '-', '' );
+
+                const bits = new Array( 2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5 );
+
+                let sum = 0;
+                for( let i=0 ; i<bits.length ; i++ ) {
+                    sum += Number(strJumin.substring(i, i+1) ) * bits[i];
+                }
+
+                let resultNum = ( 11 - (sum % 11 ) ) % 10;
+
+                let lastNum = Number(strJumin.substring(12, 13) );
+                    
+                if( lastNum == resultNum ) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        const jumin = '123456-1234567';
+
+        let util = new Util( jumin );
+        if( util.isJuminCheck() ) {
+            console.log( '형식이 맞음' );
+        } else {
+            console.log( '형식이 틀림' );
+        }
+    </script>
+</body>
+</html>

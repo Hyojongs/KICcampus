@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 배열과 함수
+        // 2개
+        const doFunc1 = function( data1, data2 ) {
+            console.log( data1, data2 );
+        };
+
+        // 가변인자
+        const doFunc2 = function() {
+            // arguments - 파라메터에 대한 배열
+            //console.log( arguments.length );
+            for( let i=0 ; i<arguments.length ; i++ ) {
+                console.log( arguments[i] );
+            }
+        };
+
+        //doFunc2( 10 );
+        doFunc2( 10, 20 );
+        //doFunc2( 10, 20, 30 );
+
+    </script>
+</body>
+</html>

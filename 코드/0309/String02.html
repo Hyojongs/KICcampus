@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let str1 = 'Hello String 안녕 String';
+
+        // 문자열의 길이
+        console.log( str1.length );
+
+        // 문자분리
+        console.log( str1[0] );
+        console.log( str1.charAt(0));
+
+        // 맨 마지막자 분리
+        console.log( str1.charAt(str1.length - 1));
+
+        // 문자열 분리 : substr / substring / slice
+        console.log( str1.substr(6) );
+        console.log( str1.substr(6, 6) );
+        console.log( str1.substring(6, 12) );
+        console.log( str1.slice(6, 12) );
+
+        // 안녕
+        console.log( str1.substr(13, 2) );
+
+        // 문자열 검색 - 위치
+        console.log( str1.indexOf( 'l' ) );
+        // -1 문자열이 없음
+        console.log( str1.indexOf( 'S', 7 ) );
+        console.log( str1.lastIndexOf( 'S' ) );
+
+        console.log( str1.search( 'String' ) );
+
+        // include / startsWith / endsWith
+
+        // 대소문자 변환
+        console.log( str1.toUpperCase() );
+        console.log( str1.toLowerCase() );
+
+        console.log( 'abc'.toUpperCase() );
+        let str2 = 'abc'.toUpperCase();
+        console.log( str2 );
+
+        // 문자열 치환
+        console.log( str1.replace( 'Hello', '안녕' ) );
+
+        // 문자열 결합
+        // +
+        console.log( str1 + ' hello 안녕' );
+        console.log( str1.concat( ' hello 안녕', ' 1', ' 2' ) );
+    </script>
+</body>
+</html>
