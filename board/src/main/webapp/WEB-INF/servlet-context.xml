@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+ <beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+ 	
+ 	<bean name="/list.do" class="model2.ListAction"/>
+ 	<bean name="/view.do" class="model2.ViewAction"/>
+ 	<bean name="/write.do" class="model2.WriteAction"/>
+ 	<bean name="/write_ok.do" class="model2.WriteActionOk"/>
+ 	<bean name="/delete.do" class="model2.DeleteAction"/>
+ 	<bean name="/delete_ok.do" class="model2.DeleteActionOk"/>
+ 	<bean name="/modify.do" class="model2.ModifyAction"/>
+ 	<bean name="/modify_ok.do" class="model2.ModifyActionOk"/>
+ 	
+ 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+ 		<property name="prefix" value="/WEB-INF/design_simple1/" />
+ 		<property name="suffix" value=".jsp"/>
+ 	</bean>
+</beans>
